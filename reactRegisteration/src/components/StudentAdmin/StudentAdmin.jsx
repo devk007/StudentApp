@@ -19,7 +19,7 @@ const StudentAdmin = () => {
       }
     } else {
       try {
-        const response = await fetch(`http://localhost:3002/admin/showByEmail/${sid}`);
+        const response = await fetch(`https://studentapp-backend-61my.onrender.com//admin/showByEmail/${sid}`);
         const result = await response.json();
         setStudentData([result.msg]); // wrap in array for table mapping consistency
       } catch (error) {
@@ -30,7 +30,7 @@ const StudentAdmin = () => {
 
   const handleDelete = async (email) => {
     try {
-      const response = await fetch(`http://localhost:3002/admin/deleteByEmail/${email}`, { method: 'DELETE' });
+      const response = await fetch(`https://studentapp-backend-61my.onrender.com/admin/deleteByEmail/${email}`, { method: 'DELETE' });
       const result = await response.json();
       alert(result.msg);
       setStudentData(prevData => prevData.filter(student => student.email !== email));
@@ -51,7 +51,7 @@ const StudentAdmin = () => {
     if (newPassword) updateData.password = newPassword;
   
     try {
-      const response = await fetch(`http://localhost:3002/admin/updateByEmail/${email}`, {
+      const response = await fetch(`https://studentapp-backend-61my.onrender.com/admin/updateByEmail/${email}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(updateData),
