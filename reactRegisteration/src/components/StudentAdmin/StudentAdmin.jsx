@@ -9,7 +9,7 @@ const StudentAdmin = () => {
   
     if (sid === '*') {
       try {
-        const response = await fetch(`http://localhost:3002/admin/show`);
+        const response = await fetch(`https://studentapp-backend-61my.onrender.com//admin/show`);
         const result = await response.json();
         setStudentData(result.msg);
         console.log(result);

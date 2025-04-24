@@ -9,7 +9,7 @@ function Login() {
 
         console.log(email, password);
 
-        const response = await fetch("http://localhost:4004/login", {
+        const response = await fetch("https://studentapp-backend-61my.onrender.com//login", {
             method: "POST",
             body: JSON.stringify({ email, password }),
             headers: { 'Content-Type': 'application/json' }
