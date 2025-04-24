@@ -1,0 +1,17 @@
+.app-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.nav-link {
+  margin: 10px;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  background: #007bff;
+  border-radius: 5px;
+}
+
+.nav-link:hover {
+  background: #0056b3;
+}
