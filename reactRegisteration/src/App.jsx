@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Registration from './components/Registeration/Registeration';
 import Login from './components/Login/Login';
-import StudentAdmin from './components/studentAdmin/studentAdmin';
+import StudentAdmin from './components/StudentAdmin/StudentAdmin';
 
 const App = () => {
     return (
